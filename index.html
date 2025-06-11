@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Annapurna - UI/UX Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        }
+        .cta-button {
+            background-color: #F97316;color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #EA580C;}
+        .outline-button {
+            border: 1px solid #F97316;
+            color: #F97316;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .outline-button:hover {
+            background-color: #F97316;
+            color: white;
+        }
+        .progress-bar-bg {
+            background-color: #374151;}
+        .progress-bar-fill {
+            background-color: #F97316;
+        }
+        .card {
+            background-color: #1E293B;border-radius: 0.75rem;padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.1), 0 4px 6px -2px rgba(249, 115, 22, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300">
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-md">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a class="text-2xl font-bold text-white" href="#">
+<span class="text-orange-500">A</span>nnapurna
+            </a>
+<nav class="hidden md:flex space-x-6 items-center">
+<a class="hover:text-orange-500 transition-colors" href="file:///D:/my-portfolio/Home_Page.html">Home</a>
+<a class="hover:text-orange-500 transition-colors" href="#services">Services</a>
+<a class="hover:text-orange-500 transition-colors" href="file:///D:/my-portfolio/Portfolio.html">Portfolio</a>
+<a class="hover:text-orange-500 transition-colors" href="#about">About</a>
+<a class="hover:text-orange-500 transition-colors" href="#contact">Contact</a>
+</nav>
+<a class="cta-button hidden md:inline-block" href="#contact">Let's Talk</a>
+<button class="md:hidden text-white">
+<span class="material-icons">menu</span>
+</button>
+</div>
+</header>
+<section class="pt-24 pb-16 gradient-bg" id="home">
+<div class="container mx-auto px-6">
+<div class="text-center mb-4">
+<h1 class="text-5xl font-bold text-white mb-2">About Me</h1>
+<p class="text-slate-400">Home <span class="text-orange-500">&gt;</span> About Me</p>
+</div>
+</div>
+</section>
+<section class="py-16 bg-slate-900" id="about-content">
+<div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<div class="relative">
+<div class="absolute inset-0 bg-orange-500 rounded-full transform scale-90 opacity-30 blur-2xl"></div>
+<img alt="Annapurna - UI/UX Designer" class="rounded-full relative z-10 shadow-2xl mx-auto md:mx-0 w-3/4 md:w-full max-w-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIGW3Ybr6yWhHbsMshuomW2l1A7oyx-PKBxFWhTn-WHOMlWo4DtMm_0yUCZT4KJ95buMCACzK5UvwOj-p9JGna-C1MD3kurQ9W6afB4db7c0KkOiJiZRTp79TLy2x8ceXAvVZ0EYmNyTeHlpDBf5PEUPJL-4YGJFIFp2bqW7mAuQ3GUeScTcDq8MLVjarVWpkQHyF8JJXJhqgW2oaallD03P2nWEnuJmz7bSsq3n7hl277boGkugk96XLczOmhnhHQ0EZksosmLaYp" />
+</div>
+<div>
+<span class="text-orange-500 font-semibold text-sm">About Me</span>
+<h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">Get a website that will make a lasting impression on your audience!!!</h2>
+<p class="text-slate-400 mb-6">
+                    Hi, I’m Annapurna Gawande — a passionate UI/UX designer crafting simple, human-centered digital products.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+<div>
+<p class="text-slate-400">Name:</p>
+<p class="text-white font-medium">Annapurna Gawande</p>
+</div>
+<div>
+<p class="text-slate-400">Phone:</p>
+<p class="text-white font-medium">(+91) 8698592792</p>
+</div>
+<div>
+<p class="text-slate-400">Email:</p>
+<p class="text-white font-medium">annapurnagawande@</p>
+</div>
+<div>
+<p class="text-slate-400">Location:</p>
+<p class="text-white font-medium">Mumbai, Maharashtra</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<a class="cta-button text-center" href="#contact">Contact Me</a>
+<a class="outline-button text-center flex items-center justify-center" href="#">
+                        Download my Resume <span class="material-icons ml-2 text-sm">download</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-slate-800" id="skills">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-white">My Work Skills</h2>
+<p class="text-slate-400 mt-2 max-w-2xl mx-auto">I combine research, design, and empathy to create intuitive and delightful user experiences.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">UI/UX Design</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 92%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">92%</p>
+</div>
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">User Research</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 78%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">78%</p>
+</div>
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">Wireframing</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 85%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">85%</p>
+</div>
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">Web Design</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 95%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">95%</p>
+</div>
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">Graphic Design</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 80%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">80%</p>
+</div>
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">Figma & Adobe XD</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 90%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">90%</p>
+</div>
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">HTML/CSS Basics</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 64%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">64%</p>
+</div>
+<div class="skill-item p-6 bg-slate-700 rounded-lg shadow-md">
+<h3 class="text-lg font-semibold text-white mb-2">Design Thinking</h3>
+<div class="progress-bar-bg w-full h-2.5 rounded-full mb-1">
+<div class="progress-bar-fill h-2.5 rounded-full" style="width: 88%"></div>
+</div>
+<p class="text-sm text-slate-400 text-right">88%</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-slate-900" id="services">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-white">My Services</h2>
+<p class="text-slate-400 mt-2 max-w-2xl mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="card text-center">
+<img alt="UI/UX Design Mockup" class="rounded-lg mb-6 w-full h-64 object-cover" />
+<h3 class="text-xl font-semibold text-white mb-2">UI/UX Design</h3>
+<p class="text-slate-400 mb-4 text-sm">Crafting user-centric designs that are both beautiful and functional.</p>
+<a class="text-orange-500 font-medium hover:text-orange-400 transition-colors inline-flex items-center" href="file:///D:/Portfolio%20website(UIUX%20Design)/casestudy.html">
+                        Learn More <span class="material-icons ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="card text-center">
+<img alt="Web Design Mockup" class="rounded-lg mb-6 w-full h-64 object-cover" />
+<h3 class="text-xl font-semibold text-white mb-2">Web Design</h3>
+<p class="text-slate-400 mb-4 text-sm">Building responsive and visually appealing websites tailored to your brand.</p>
+<a class="text-orange-500 font-medium hover:text-orange-400 transition-colors inline-flex items-center" href="#">
+                        Learn More <span class="material-icons ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="card text-center">
+<img alt="Web Development Mockup" class="rounded-lg mb-6 w-full h-64 object-cover" />
+<h3 class="text-xl font-semibold text-white mb-2">Graphic Design</h3>
+<p class="text-slate-400 mb-4 text-sm">Developing robust and scalable web solutions using modern technologies.</p>
+<a class="text-orange-500 font-medium hover:text-orange-400 transition-colors inline-flex items-center" href="#">
+                        Learn More <span class="material-icons ml-1 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- <section class="py-16 bg-slate-800" id="testimonials">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-white">What My Clients Say</h2>
+<p class="text-slate-400 mt-2 max-w-2xl mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-slate-700 p-8 rounded-lg shadow-lg">
+<div class="flex items-center mb-4">
+<img alt="Robert J." class="w-14 h-14 rounded-full mr-4" />
+<div>
+<h4 class="text-white font-semibold">Robert J.</h4>
+<p class="text-xs text-orange-400">CEO, Company</p>
+</div>
+<span class="material-icons text-orange-500 text-5xl ml-auto opacity-30">format_quote</span>
+</div>
+<p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="bg-slate-700 p-8 rounded-lg shadow-lg">
+<div class="flex items-center mb-4">
+<img alt="Janica Z." class="w-14 h-14 rounded-full mr-4" />
+<div>
+<h4 class="text-white font-semibold">Janica Z.</h4>
+<p class="text-xs text-orange-400">Marketing Head</p>
+</div>
+<span class="material-icons text-orange-500 text-5xl ml-auto opacity-30">format_quote</span>
+</div>
+<p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="bg-slate-700 p-8 rounded-lg shadow-lg">
+<div class="flex items-center mb-4">
+<img alt="Justin B." class="w-14 h-14 rounded-full mr-4" />
+<div>
+<h4 class="text-white font-semibold">Justin B.</h4>
+<p class="text-xs text-orange-400">Founder, Startup</p>
+</div>
+<span class="material-icons text-orange-500 text-5xl ml-auto opacity-30">format_quote</span>
+</div>
+<p class="text-slate-300 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+</div>
+</div>
+</section> -->
+<footer class="bg-slate-900 pt-16 pb-8" id="contact">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<a class="text-2xl font-bold text-white mb-4 inline-block" href="#">
+<span class="text-orange-500">A</span>nnapurna
+                    </a>
+<p class="text-slate-400 text-sm">
+Hi, I’m Annapurna — a UI/UX designer.I craft simple, intuitive digital experiences.My approach is user-first and detail-focused.I value clarity, function, and clean design.
+Let’s make design feel effortless.
+</p>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-4">Navigation</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="text-slate-400 hover:text-orange-500 transition-colors" href="Home_Page.html">Home</a></li>
+<li><a class="text-slate-400 hover:text-orange-500 transition-colors" href="#services">Services</a></li>
+<li><a class="text-slate-400 hover:text-orange-500 transition-colors" href="Portfolio.html">Portfolio</a></li>
+<li><a class="text-slate-400 hover:text-orange-500 transition-colors" href="/Portfolio.html">About</a></li>
+<li><a class="text-slate-400 hover:text-orange-500 transition-colors" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-4">Contact</h5>
+<ul class="space-y-2 text-sm text-slate-400">
+<li class="flex items-center">
+<span class="material-icons text-orange-500 mr-2 text-base">phone</span> (+91) 8698592792
+                        </li>
+<li class="flex items-center">
+<span class="material-icons text-orange-500 mr-2 text-base">email</span> annapurnagawande@gmail.com
+                        </li>
+<li class="flex items-center">
+<span class="material-icons text-orange-500 mr-2 text-base">location_on</span> Mumbai, Maharashtra
+                        </li>
+<li class="flex items-center">
+<span class="material-icons text-orange-500 mr-2 text-base">schedule</span> Mon - Fri / 8am - 6pm
+                        </li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-semibold mb-4">Get the latest information</h5>
+<form class="flex">
+<input class="bg-slate-800 text-slate-300 px-4 py-2.5 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm flex-grow" placeholder="Your email" type="email"/>
+<button class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2.5 rounded-r-md transition-colors" type="submit">
+<span class="material-icons text-lg">send</span>
+</button>
+</form>
+</div>
+</div>
+<div class="border-t border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+<p>Copyright © 2025 Annapurna. All Rights Reserved.</p>
+<div class="space-x-4 mt-4 md:mt-0">
+<a class="hover:text-orange-500 transition-colors" href="#">Terms &amp; Service</a>
+<a class="hover:text-orange-500 transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

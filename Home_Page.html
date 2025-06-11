@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annapurna - UI/UX Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .cta-button {
+      background-color: #F97316;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #EA580C;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-300">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-md">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a class="text-2xl font-bold text-white" href="#">
+      <span class="text-orange-500">A</span>nnapurna
+    </a>
+    <nav class="hidden md:flex space-x-6 items-center">
+      <a href="Home_Page.html" class="hover:text-orange-500 transition-colors">Home</a>
+      <a href="Index.html" class="hover:text-orange-500 transition-colors">About Us</a>
+      <a href="#contact" class="hover:text-orange-500 transition-colors">Contact</a>
+    </nav>
+    <a href="#contact" class="cta-button hidden md:inline-block">Let's Talk</a>
+  </div>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="pt-24 pb-16 gradient-bg text-center">
+  <div class="container mx-auto px-6">
+    <h1 class="text-5xl font-bold text-white mb-4">Hi, I'm Annapurna</h1>
+    <p class="text-lg text-slate-300 mb-6 max-w-2xl mx-auto">A passionate UI/UX designer based in Mumbai, crafting simple and impactful digital experiences for modern users.</p>
+    <a href="#learn-more" class="cta-button">Explore My Work</a>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section id="learn-more" class="py-20 bg-slate-800">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIGW3Ybr6yWhHbsMshuomW2l1A7oyx-PKBxFWhTn-WHOMlWo4DtMm_0yUCZT4KJ95buMCACzK5UvwOj-p9JGna-C1MD3kurQ9W6afB4db7c0KkOiJiZRTp79TLy2x8ceXAvVZ0EYmNyTeHlpDBf5PEUPJL-4YGJFIFp2bqW7mAuQ3GUeScTcDq8MLVjarVWpkQHyF8JJXJhqgW2oaallD03P2nWEnuJmz7bSsq3n7hl277boGkugk96XLczOmhnhHQ0EZksosmLaYp" alt="Annapurna - UI/UX Designer" class="rounded-xl shadow-2xl w-full max-w-md mx-auto md:mx-0" >        <-- image from porfolio -->
+    </div>
+    <div>
+      <h2 class="text-4xl font-bold text-white mb-4">Learn More About Me</h2>
+      <p class="text-slate-400 mb-6">With over 5 years of experience, I specialize in creating user-friendly and visually stunning digital interfaces. My process is rooted in empathy, research, and attention to detail. Whether it's wireframes, prototypes, or high-fidelity designs, I aim to make the user journey seamless and enjoyable.</p>
+      <ul class="space-y-2 text-slate-300">
+        <li><span class="material-icons text-orange-500 mr-2 align-middle">check_circle</span> Expert in UI/UX design tools like Figma & Adobe XD</li>
+        <li><span class="material-icons text-orange-500 mr-2 align-middle">check_circle</span> Strong focus on user research and accessibility</li>
+        <li><span class="material-icons text-orange-500 mr-2 align-middle">check_circle</span> Experience designing for startups and enterprise clients</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (optional) -->
+<footer id="contact" class="bg-slate-900 text-slate-500 text-sm text-center py-6">
+  <p>Contact me at <span class="text-orange-500">annapurnagawande@gmail.com</span> | Mumbai, India</p>
+</footer>
+
+</body>
+</html>
