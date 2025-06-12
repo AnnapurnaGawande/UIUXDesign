@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Annapurna - UI/UX Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .cta-button {
+      background-color: #F97316;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #EA580C;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-300">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-md">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a class="text-2xl font-bold text-white" href="index.html">
+      <span class="text-orange-500">A</span>nnapurna
+    </a>
+    <nav class="hidden md:flex space-x-6 items-center">
+      <a href="Home_Page.html" class="hover:text-orange-500 transition-colors">Home</a>
+      <a href="index.html" class="hover:text-orange-500 transition-colors">About Us</a>
+      <a href="contact.html" class="text-orange-500 font-semibold">Contact</a>
+    </nav>
+    <a href="#contact" class="cta-button hidden md:inline-block">Let's Talk</a>
+  </div>
+</header>
+
+<!-- Contact Section -->
+<section class="pt-32 pb-20 px-6 max-w-3xl mx-auto text-center">
+  <h1 class="text-4xl font-bold text-white mb-4">Let's Connect</h1>
+  <p class="mb-8 text-slate-400">Have a project in mind or just want to say hi? Feel free to drop a message and I'll get back to you soon!</p>
+
+  <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6 text-left">
+    <div>
+      <label class="block text-slate-300 mb-1">Name</label>
+      <input type="text" name="name" required class="w-full p-3 rounded bg-slate-800 text-white border border-slate-700 focus:outline-none focus:border-orange-500">
+    </div>
+    <div>
+      <label class="block text-slate-300 mb-1">Email</label>
+      <input type="email" name="email" required class="w-full p-3 rounded bg-slate-800 text-white border border-slate-700 focus:outline-none focus:border-orange-500">
+    </div>
+    <div>
+      <label class="block text-slate-300 mb-1">Message</label>
+      <textarea name="message" rows="5" required class="w-full p-3 rounded bg-slate-800 text-white border border-slate-700 focus:outline-none focus:border-orange-500"></textarea>
+    </div>
+    <button type="submit" class="cta-button w-full text-center">Send Message</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-500 text-sm text-center py-6 border-t border-slate-800">
+  <p>Contact me at <span class="text-orange-500">annapurnagawande@gmail.com</span> | Mumbai, India</p>
+</footer>
+
+</body>
+</html>
