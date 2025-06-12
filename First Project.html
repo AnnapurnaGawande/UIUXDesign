@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Improving the Fashion E-commerce Checkout UX</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Tracker App – Case Study | Annapurna Gawande</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .cta-button {
+      background-color: #F97316;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #EA580C;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed tracking-wide">
+<body class="bg-slate-900 text-slate-300">
 
-  <header class="bg-black text-white py-6 px-4 md:px-12">
-    <h1 class="text-3xl font-bold">Case Study: Improving the Fashion E-commerce Checkout UX</h1>
-  </header>
+<!-- Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-md">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a class="text-2xl font-bold text-white" href="#">
+      <span class="text-orange-500">A</span>nnapurna
+    </a>
+    <nav class="hidden md:flex space-x-6 items-center">
+      <a href="Home_Page.html" class="hover:text-orange-500 transition-colors">Home</a>
+      <a href="First_Project.html" class="hover:text-orange-500 transition-colors">Projects</a>
+      <a href="#contact" class="hover:text-orange-500 transition-colors">Contact</a>
+    </nav>
+    <a href="#contact" class="cta-button hidden md:inline-block">Let's Talk</a>
+  </div>
+</header>
 
-  <main class="max-w-4xl mx-auto p-6 space-y-12">
+<!-- Hero -->
+<section class="pt-24 pb-12 gradient-bg text-center">
+  <div class="container mx-auto px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Fitness Tracker App</h1>
+    <p class="text-slate-400 max-w-2xl mx-auto">A mobile-first design that empowers users to stay consistent with their health goals through intuitive UI and engaging features.</p>
+  </div>
+</section>
 
-    <!-- Problem & Pain Points -->
-    <section>
-      <h2 class="text-2xl font-semibold text-indigo-600 mb-2">Problem & User Pain Points</h2>
-      <p>
-        Users often abandon their carts during the checkout process due to a long, confusing flow, unexpected costs,
-        and a lack of trust in payment security. The existing checkout was cluttered, non-mobile-friendly, and required too many steps to complete.
-      </p>
-    </section>
-
-    <!-- User Research & Personas -->
-    <section>
-      <h2 class="text-2xl font-semibold text-indigo-600 mb-2">User Research & Personas</h2>
-      <p>
-        Interviews with 12 fashion shoppers (ages 20–35) revealed a desire for speed, simplicity, and clear progress indicators. 
-        Two key personas emerged:
-      </p>
-      <ul class="list-disc pl-6 mt-3">
-        <li><strong>Alicia (26, Student):</strong> Shops frequently via mobile, values quick, secure checkouts.</li>
-        <li><strong>David (32, Designer):</strong> Wants transparency and dislikes creating accounts just to purchase.</li>
+<!-- Project Overview -->
+<section class="py-16 bg-slate-800">
+  <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="https://via.placeholder.com/600x400.png?text=Fitness+App+UI" alt="Fitness App Mockup" class="rounded-lg shadow-lg">
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold text-white mb-4">Project Overview</h2>
+      <p class="text-slate-400 mb-4">The goal was to create a user-friendly fitness app that motivates users to track workouts, monitor progress, and build healthy habits. The solution included gamified progress, personalized dashboards, and dark/light theme support.</p>
+      <ul class="list-disc list-inside text-slate-400">
+        <li>Platform: iOS & Android</li>
+        <li>Role: UI/UX Designer</li>
+        <li>Tools: Figma, Adobe Illustrator</li>
+        <li>Timeline: 6 Weeks</li>
       </ul>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- User Flow -->
-    <section>
-      <h2 class="text-2xl font-semibold text-indigo-600 mb-2">User Flow</h2>
-      <p>
-        The redesigned flow: <strong>Cart → Shipping Info → Payment → Review & Confirm</strong>. The revised process reduced steps and clarified each action.
-      </p>
-      <div class="mt-4 p-4 border border-gray-200 bg-gray-50">
-        <!-- Add image or flowchart here -->
-        <em>(Insert user flow diagram)</em>
+<!-- Design Process -->
+<section class="py-16 bg-slate-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-white text-center mb-12">Design Process</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-xl text-white font-semibold mb-2">1. Research & Discovery</h3>
+        <p class="text-slate-400 mb-6">Conducted interviews with 10 fitness app users to identify pain points. The top findings were poor habit tracking, confusing UI, and lack of reminders.</p>
+
+        <h3 class="text-xl text-white font-semibold mb-2">2. Wireframing</h3>
+        <p class="text-slate-400 mb-6">Sketched key user flows including onboarding, tracking, and progress screens. Created low-fidelity wireframes in Figma for quick feedback.</p>
       </div>
-    </section>
+      <div>
+        <h3 class="text-xl text-white font-semibold mb-2">3. High-Fidelity Design</h3>
+        <p class="text-slate-400 mb-6">Built a clean and modern UI using a calming color palette and bold typography. Used components for consistency across 30+ screens.</p>
 
-    <!-- Wireframes (Lo-Fi) -->
-    <section>
-      <h2 class="text-2xl font-semibold text-indigo-600 mb-2">Wireframes (Lo-Fi)</h2>
-      <p>
-        Low-fidelity wireframes helped validate layout changes and sequence. Feedback during usability testing confirmed improvements.
-      </p>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="border p-4 bg-gray-50 text-center"><em>Wireframe: Cart Page</em></div>
-        <div class="border p-4 bg-gray-50 text-center"><em>Wireframe: Payment Step</em></div>
+        <h3 class="text-xl text-white font-semibold mb-2">4. Testing & Iteration</h3>
+        <p class="text-slate-400">Usability testing with 5 users revealed friction in progress navigation. Iterated with better icons, progress rings, and simplified layout.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- UX Fixes -->
-    <section>
-      <h2 class="text-2xl font-semibold text-indigo-600 mb-2">UX Fixes You Made</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>Condensed checkout into 3 simple, clear steps.</li>
-        <li>Introduced guest checkout to reduce friction.</li>
-        <li>Improved mobile responsiveness and readability.</li>
-        <li>Added trust signals (badges, reviews) at payment.</li>
-        <li>Implemented autofill and address lookup for speed.</li>
-      </ul>
-    </section>
+<!-- Results -->
+<section class="py-16 bg-slate-800">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-white mb-6">Project Results</h2>
+    <p class="text-slate-400 max-w-2xl mx-auto mb-8">After launch, the app saw a 40% increase in daily active users and a 22% improvement in goal completion rate. Users praised the clean interface and motivation features.</p>
+    <a href="/projects.html" class="cta-button">Back to All Projects</a>
+  </div>
+</section>
 
-    <!-- Key Takeaways -->
-    <section>
-      <h2 class="text-2xl font-semibold text-indigo-600 mb-2">Key Takeaways</h2>
-      <p>
-        Simplifying the checkout flow led to a 22% increase in completed purchases during testing. The project reinforced the value
-        of user feedback, fast iteration, and designing with real pain points in mind.
-      </p>
-    </section>
-
-  </main>
-
-  <footer class="text-center text-sm py-6 bg-gray-100">
-    &copy; 2025 Annapurna Gawande — UI/UX Designer
-  </footer>
+<!-- Footer -->
+<footer id="contact" class="bg-slate-900 text-slate-500 text-sm text-center py-8">
+  <p>Contact: <a href="mailto:annapurnagawande@gmail.com" class="text-orange-500 hover:underline">annapurnagawande@gmail.com</a> | Mumbai, India</p>
+  <p class="mt-2">© 2025 Annapurna. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
