@@ -143,10 +143,13 @@
     }
     
     .typing-animation {
-      overflow: hidden;
-      border-right: 2px solid #F97316;
-      white-space: nowrap;
-      animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+     display: inline-block;
+     max-width: 120px; /* Adjust width based on name */
+     overflow: hidden;
+     border-right: 2px solid #F97316;
+     white-space: nowrap;
+     vertical-align: bottom;
+     animation: typing 3s steps(10, end) forwards, blink-caret 0.75s step-end infinite;
     }
     
     @keyframes typing {
