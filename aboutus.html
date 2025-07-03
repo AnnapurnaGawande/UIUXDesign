@@ -296,26 +296,43 @@
 </head>
 <body class="bg-slate-900 text-slate-300 overflow-x-hidden">
 
-<!-- Header -->
-<header class="fixed top-0 left-0 right-0 z-50 glass-card shadow-xl">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a class="text-2xl font-bold text-white flex items-center" href="/">
-      <span class="text-orange-500 text-3xl mr-2">A</span>
-      <span>nnapurna</span>
-    </a>
-    <nav class="hidden md:flex space-x-8 items-center">
-      <a href="index.html" class="nav-link hover:text-orange-500 transition-colors">Home</a>
-      <a href="portfolio.html" class="nav-link hover:text-orange-500 transition-colors">Portfolio</a>
-      <a href="#about" class="nav-link hover:text-orange-500 transition-colors text-orange-500">About</a>
-      <a href="/#contact" class="nav-link hover:text-orange-500 transition-colors">Contact</a>
-    </nav>
-    <div class="flex items-center space-x-4">
-      <a href="/#contact" class="cta-button hidden md:inline-block">Let's Talk</a>
-      <button class="md:hidden text-white" onclick="toggleMobileMenu()">
-        <span class="material-icons">menu</span>
-      </button>
+<!-- Hero Section -->
+<section class="min-h-screen hero-gradient flex items-center justify-center relative pt-16">
+  <div class="container mx-auto px-6 z-10">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text Side -->
+      <div class="slide-in-left text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Meet <span class="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Annapurna</span>
+        </h1>
+        <p class="text-lg md:text-2xl text-slate-300 mb-8 font-light">
+          A passionate <span class="text-orange-500 font-semibold">UI/UX Designer</span> crafting exceptional digital experiences that bridge the gap between user needs and business goals.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 items-center sm:items-start justify-center md:justify-start">
+          <a href="#story" class="cta-button">
+            My Story
+            <span class="material-icons ml-2 align-middle">arrow_downward</span>
+          </a>
+          <a href="portfolio.html" class="px-8 py-3 border-2 border-orange-500 text-orange-500 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition-all">
+            View Portfolio
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Side -->
+      <div class="slide-in-right">
+        <div class="relative mx-auto md:mx-0">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face"
+               alt="Annapurna" 
+               class="profile-image w-full max-w-xs sm:max-w-sm md:w-80 aspect-square object-cover" />
+          <div class="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-20 float-animation"></div>
+          <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500 rounded-full opacity-20 float-animation" style="animation-delay: 2s;"></div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
   
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-slate-800 shadow-2xl md:hidden z-40">
@@ -337,7 +354,7 @@
 </header>
 
 <!-- Hero Section -->
-<section class="min-h-screen hero-gradient flex items-center justify-center text-center relative pt-20">
+<section class="min-h-screen hero-gradient flex items-center justify-center text-center md:text-left relative pt-20">
   <div class="container mx-auto px-6 z-10">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="slide-in-left">
@@ -359,7 +376,7 @@
       </div>
       <div class="slide-in-right">
         <div class="relative">
-          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face" alt="Annapurna" class="profile-image w-80 h-80 mx-auto object-cover">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face" alt="Annapurna" class="profile-image w-full max-w-xs sm:max-w-sm md:w-80 and aspect-square mx-auto object-cover">
           <div class="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-20 float-animation"></div>
           <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500 rounded-full opacity-20 float-animation" style="animation-delay: 2s;"></div>
         </div>
