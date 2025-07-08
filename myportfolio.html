@@ -257,6 +257,21 @@
       cursor: pointer;
       z-index: 1001;
     }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: typing 2s steps(10, end) forwards;
+}
 
   </style>
 </head>
@@ -267,7 +282,7 @@
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a class="text-2xl font-bold text-white flex items-center" href="/">
       <span class="text-orange-500 text-3xl">A</span>
-      <span>nnapurna</span>
+      <span class="typing-animation inline-block">nnapurna</span>
     </a>
     <nav class="hidden md:flex space-x-8 items-center">
       <a href="index.html" class="nav-link hover:text-orange-500 transition-colors">Home</a>
