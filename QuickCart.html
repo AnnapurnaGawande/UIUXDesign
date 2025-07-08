@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCart: UX Case Study - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2ECC71',
+                        secondary: '#27AE60',
+                        dark: '#34495E',
+                        light: '#f8f9fa'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #2ECC71, #27AE60);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: #2ECC71;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">QuickCart</h1>
+                <p class="text-xl md:text-2xl mb-4 opacity-90">A Personal UX Design Project</p>
+                <p class="text-lg italic opacity-75 mb-8">A 4-week solo design challenge to reimagine grocery shopping</p>
+                
+                <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+                    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-4 md:p-6">
+                        <div class="font-semibold text-sm md:text-base mb-2">Duration</div>
+                        <div class="text-sm md:text-base">4 weeks</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-4 md:p-6">
+                        <div class="font-semibold text-sm md:text-base mb-2">Role</div>
+                        <div class="text-sm md:text-base">Solo UX/UI Designer</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-4 md:p-6">
+                        <div class="font-semibold text-sm md:text-base mb-2">Tools</div>
+                        <div class="text-sm md:text-base">Figma, Miro, Google Forms</div>
+                    </div>
+                    <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-4 md:p-6">
+                        <div class="font-semibold text-sm md:text-base mb-2">Type</div>
+                        <div class="text-sm md:text-base">Personal Project</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <ul class="flex flex-wrap justify-center gap-2 md:gap-8 py-4">
+                <li><a href="#overview" class="px-4 py-2 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-all duration-300 font-medium">Overview</a></li>
+                <li><a href="#problem" class="px-4 py-2 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-all duration-300 font-medium">Problem</a></li>
+                <li><a href="#process" class="px-4 py-2 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-all duration-300 font-medium">Process</a></li>
+                <li><a href="#solution" class="px-4 py-2 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-all duration-300 font-medium">Solution</a></li>
+                <li><a href="#testing" class="px-4 py-2 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-all duration-300 font-medium">Testing</a></li>
+                <li><a href="#learnings" class="px-4 py-2 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-all duration-300 font-medium">Learnings</a></li>
+                <li><a href="#impact" class="px-4 py-2 rounded-full text-gray-700 hover:bg-primary hover:text-white transition-all duration-300 font-medium">Impact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <!-- Overview Section -->
+            <section id="overview" class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary border-b-4 border-primary pb-4">Project Overview</h2>
+                <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed">As a design student, I wanted to tackle a real problem I face weekly—grocery shopping stress. This project became my opportunity to practice the full UX design process on a problem I genuinely cared about solving.</p>
+                
+                <div class="bg-white border-l-4 border-primary p-6 md:p-8 rounded-r-lg shadow-lg italic text-lg md:text-xl text-gray-700">
+                    "Every Sunday, I'd spend 2 hours grocery shopping for what should be a 30-minute task. I'd forget items, wander aisles looking for products, and always overspend. I knew I wasn't alone in this struggle."
+                </div>
+            </section>
+
+            <!-- Problem Section -->
+            <section id="problem" class="mb-20">
+                <div class="bg-light rounded-3xl p-8 md:p-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary">The Problem: My Grocery Shopping Reality</h2>
+                    
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">Research Approach (Week 1)</h3>
+                    <p class="text-lg mb-8 text-gray-700">Since this was a personal project, I had limited resources but used creative methods:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <div class="text-3xl mb-4">📊</div>
+                            <h4 class="text-xl font-semibold mb-3 text-primary">Survey</h4>
+                            <p class="text-gray-600">25 friends and family via Google Forms</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <div class="text-3xl mb-4">👀</div>
+                            <h4 class="text-xl font-semibold mb-3 text-primary">Observation</h4>
+                            <p class="text-gray-600">Watched shoppers at local grocery store</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <div class="text-3xl mb-4">💬</div>
+                            <h4 class="text-xl font-semibold mb-3 text-primary">Interviews</h4>
+                            <p class="text-gray-600">8 people over coffee/video calls</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                            <div class="text-3xl mb-4">🔍</div>
+                            <h4 class="text-xl font-semibold mb-3 text-primary">Analysis</h4>
+                            <p class="text-gray-600">Reviewed 5 existing grocery apps</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">Key Insights</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <div class="gradient-bg text-white p-6 rounded-xl text-center">
+                            <div class="text-3xl md:text-4xl font-bold mb-2">80%</div>
+                            <div class="text-sm md:text-base">Use physical lists they often forget</div>
+                        </div>
+                        <div class="gradient-bg text-white p-6 rounded-xl text-center">
+                            <div class="text-3xl md:text-4xl font-bold mb-2">45min</div>
+                            <div class="text-sm md:text-base">Longer than planned shopping trips</div>
+                        </div>
+                        <div class="gradient-bg text-white p-6 rounded-xl text-center">
+                            <div class="text-3xl md:text-4xl font-bold mb-2">Multiple</div>
+                            <div class="text-sm md:text-base">Stores but can't compare prices</div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">User Personas</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h4 class="text-xl font-semibold mb-4 text-primary">👩‍🎓 "Busy Beth"</h4>
+                            <div class="space-y-2 text-gray-700">
+                                <p><span class="font-semibold">Age:</span> 28, Graduate student</p>
+                                <p><span class="font-semibold">Shops:</span> Weekly for herself and roommate</p>
+                                <p><span class="font-semibold">Frustration:</span> Forgetting items and overspending</p>
+                                <p><span class="font-semibold">Goal:</span> Quick, efficient shopping within budget</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <h4 class="text-xl font-semibold mb-4 text-primary">👨‍👩‍👧‍👦 "Family-Focused Frank"</h4>
+                            <div class="space-y-2 text-gray-700">
+                                <p><span class="font-semibold">Age:</span> 35, Works full-time with two kids</p>
+                                <p><span class="font-semibold">Shops:</span> For family of four</p>
+                                <p><span class="font-semibold">Frustration:</span> Kids distracting him, missing items</p>
+                                <p><span class="font-semibold">Goal:</span> Complete family shopping without stress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section id="process" class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary border-b-4 border-primary pb-4">My Design Process</h2>
+                
+                <div class="relative timeline-line py-8">
+                    <!-- Timeline Item 1 -->
+                    <div class="flex items-center mb-12 md:mb-16">
+                        <div class="w-full md:w-5/12 md:pr-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg relative">
+                                <h4 class="text-xl font-semibold mb-4 text-primary">Week 1: Understanding the Problem</h4>
+                                <div class="mb-4">
+                                    <p class="font-semibold text-gray-700 mb-2">Research Methods:</p>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li>• Created simple survey using Google Forms</li>
+                                        <li>• Conducted informal interviews with friends/family</li>
+                                        <li>• Spent 3 hours observing in grocery stores</li>
+                                        <li>• Sketched user journey maps</li>
+                                    </ul>
+                                </div>
+                                <p class="text-sm text-gray-600"><span class="font-semibold">Biggest Learning:</span> People don't need another complicated app—they need something that actually makes shopping faster and less stressful.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg z-10 hidden md:flex">1</div>
+                        <div class="w-full md:w-5/12 md:pl-8 hidden md:block"></div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="flex items-center mb-12 md:mb-16 md:flex-row-reverse">
+                        <div class="w-full md:w-5/12 md:pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h4 class="text-xl font-semibold mb-4 text-primary">Week 2: Ideation & Concepts</h4>
+                                <div class="mb-4">
+                                    <p class="font-semibold text-gray-700 mb-2">Brainstorming Process:</p>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li>• Used sticky notes to generate 50+ ideas</li>
+                                        <li>• Grouped similar concepts</li>
+                                        <li>• Voted on top 3 concepts with friends</li>
+                                        <li>• Created simple user flows on paper</li>
+                                    </ul>
+                                </div>
+                                <p class="text-sm text-gray-600"><span class="font-semibold">Selected Concept:</span> A simple, smart shopping list app that organizes items by store layout, tracks spending in real-time, and works offline.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg z-10 hidden md:flex">2</div>
+                        <div class="w-full md:w-5/12 md:pr-8 hidden md:block"></div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="flex items-center mb-12 md:mb-16">
+                        <div class="w-full md:w-5/12 md:pr-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h4 class="text-xl font-semibold mb-4 text-primary">Week 3: Wireframing & Design</h4>
+                                <p class="text-sm text-gray-600 mb-4"><span class="font-semibold">Lo-Fi Wireframes:</span> Started with pen and paper sketches because it's faster for exploring ideas.</p>
+                                <div>
+                                    <p class="font-semibold text-gray-700 mb-2">Design Decisions:</p>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li>• Large, thumb-friendly buttons (mobile-first)</li>
+                                        <li>• Minimal color palette (green = go, red = stop)</li>
+                                        <li>• Clear typography for easy scanning while shopping</li>
+                                        <li>• Simple navigation with bottom tabs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg z-10 hidden md:flex">3</div>
+                        <div class="w-full md:w-5/12 md:pl-8 hidden md:block"></div>
+                    </div>
+
+                    <!-- Timeline Item 4 -->
+                    <div class="flex items-center mb-12 md:mb-16 md:flex-row-reverse">
+                        <div class="w-full md:w-5/12 md:pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h4 class="text-xl font-semibold mb-4 text-primary">Week 4: Prototyping & Testing</h4>
+                                <p class="text-sm text-gray-600 mb-4"><span class="font-semibold">Prototype Creation:</span> Built interactive prototype in Figma focused on core user flow: Create list → Shop → Complete</p>
+                                <div>
+                                    <p class="font-semibold text-gray-700 mb-2">Testing Process:</p>
+                                    <ul class="text-gray-600 space-y-1 text-sm">
+                                        <li>• Asked 6 friends to test the prototype</li>
+                                        <li>• Observed them using it during actual shopping trips</li>
+                                        <li>• Collected feedback via informal interviews</li>
+                                        <li>• Iterated based on feedback</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg z-10 hidden md:flex">4</div>
+                        <div class="w-full md:w-5/12 md:pr-8 hidden md:block"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section id="solution" class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary border-b-4 border-primary pb-4">The Solution: QuickCart</h2>
+                
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">Core Features</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl text-center card-hover">
+                        <div class="text-4xl mb-4">📝</div>
+                        <h4 class="text-lg font-semibold mb-3 text-primary">Smart List Organization</h4>
+                        <p class="text-gray-600 text-sm">Items automatically sorted by store sections with voice input and smart suggestions</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl text-center card-hover">
+                        <div class="text-4xl mb-4">💰</div>
+                        <h4 class="text-lg font-semibold mb-3 text-primary">Budget Tracking</h4>
+                        <p class="text-gray-600 text-sm">Real-time spending counter with visual warnings and price estimates</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl text-center card-hover">
+                        <div class="text-4xl mb-4">📱</div>
+                        <h4 class="text-lg font-semibold mb-3 text-primary">Offline-First Design</h4>
+                        <p class="text-gray-600 text-sm">All core features work without internet, essential for poor store connectivity</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl text-center card-hover">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h4 class="text-lg font-semibold mb-3 text-primary">Simple & Fast</h4>
+                        <p class="text-gray-600 text-sm">One-handed operation with large touch targets and minimal steps</p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">Key Screens & User Flow</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">🏠 Home Screen</h4>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-semibold">Purpose:</span> Quick access to current list and adding items</p>
+                        <p class="text-sm text-gray-600"><span class="font-semibold">Features:</span> Current list preview, quick add button, spending overview, recent items</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">📋 List Creation</h4>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-semibold">Purpose:</span> Build and organize shopping list</p>
+                        <p class="text-sm text-gray-600"><span class="font-semibold">Features:</span> Search and add items, voice input, automatic categorization, budget setting</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">🛒 Shopping Mode</h4>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-semibold">Purpose:</span> Guide user through store efficiently</p>
+                        <p class="text-sm text-gray-600"><span class="font-semibold">Features:</span> Items by store sections, large checkboxes, running total, store hints</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">📊 Budget Overview</h4>
+                        <p class="text-sm text-gray-600 mb-3"><span class="font-semibold">Purpose:</span> Track spending and avoid overspending</p>
+                        <p class="text-sm text-gray-600"><span class="font-semibold">Features:</span> Visual spending indicator, category breakdown, trip comparisons</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testing Section -->
+            <section id="testing" class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary border-b-4 border-primary pb-4">Testing & Iteration</h2>
+                
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">User Testing Results</h3>
+                <div class="space-y-4 mb-8">
+                    <div class="bg-white border-l-4 border-primary p-6 rounded-r-lg shadow-lg italic text-lg text-gray-700">
+                        "Finally, a simple grocery app that doesn't try to do everything"
+                    </div>
+                    <div class="bg-white border-l-4 border-primary p-6 rounded-r-lg shadow-lg italic text-lg text-gray-700">
+                        "The store section organization saved me so much time"
+                    </div>
+                    <div class="bg-white border-l-4 border-primary p-6 rounded-r-lg shadow-lg italic text-lg text-gray-700">
+                        "Love how it works without internet—so many apps fail in stores"
+                    </div>
+                </div>
+
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">Testing Method</h3>
+                <p class="text-lg mb-2 text-gray-700">Moderated usability testing with 6 participants</p>
+                <p class="text-lg mb-8 text-gray-700"><span class="font-semibold">Task:</span> Create a list, use it while shopping, track budget</p>
+
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6 text-dark">Iterations Made</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">Round 1 Changes</h4>
+                        <ul class="text-gray-600 space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Improved voice input with better error handling</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Added subtle budget warnings instead of pop-ups</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Simplified onboarding to 3 key screens</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Made text larger for better readability</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">Round 2 Changes</h4>
+                        <ul class="text-gray-600 space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Added quick tutorial animations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Improved item suggestions algorithm</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Made checkout flow more prominent</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Added dark mode option</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learnings Section -->
+            <section id="learnings" class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary border-b-4 border-primary pb-4">What I Learned</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">Design Lessons</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Start with the problem, not the solution</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Simple is harder than complex</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Test early and often</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Design for real contexts</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h4 class="text-xl font-semibold mb-4 text-primary">Personal Growth</h4>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Improved storytelling through design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Learned to work independently and stay disciplined</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Boosted confidence in presenting UX decisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-primary font-bold mr-2">✓</span>
+                                <span>Built a habit of iterative feedback</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Impact Section -->
+            <section id="impact" class="mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-8 text-primary border-b-4 border-primary pb-4">Impact & Reflections</h2>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    QuickCart began as a simple side project but became a meaningful design journey. It helped me understand the real-world challenges of grocery shopping and allowed me to explore solutions through structured UX practices.
+                </p>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    This project showcased my ability to manage the entire design lifecycle — from problem discovery to user testing — and solidified my interest in creating helpful, human-centered digital experiences.
+                </p>
+                <div class="bg-primary text-white p-6 rounded-xl text-center text-xl font-semibold shadow-md">
+                    "Great design doesn’t just look good. It works beautifully in people’s everyday lives."
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 Annapurna Gawande</p>
+            <p class="text-sm text-gray-300">Designed & built with ❤️ using HTML & Tailwind CSS</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
