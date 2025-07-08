@@ -257,6 +257,413 @@
       cursor: pointer;
       z-index: 1001;
     }
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2ECC71, #27AE60);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background: #2ECC71;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            background: white;
+            padding: 60px 0;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2ECC71;
+            border-bottom: 3px solid #2ECC71;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #34495E;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #34495E;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h4 {
+            color: #2ECC71;
+            margin-bottom: 15px;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .user-quote {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #2ECC71;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        /* Process Timeline */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: #2ECC71;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        .timeline-number {
+            background: #2ECC71;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Learning Section */
+        .learning-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .learning-column {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .learning-column h4 {
+            color: #2ECC71;
+            margin-bottom: 20px;
+        }
+
+        .learning-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .learning-column li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .learning-column li:before {
+            content: "✓";
+            color: #2ECC71;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #2ECC71, #27AE60);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #34495E;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-content h3 {
+            color: #2ECC71;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .footer-links a {
+            color: #2ECC71;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .project-meta {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 50px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline-number {
+                left: 20px;
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease-out;
+        }
+
   </style>
 </head>
 <body class="bg-slate-900 text-slate-300 overflow-x-hidden">
@@ -336,7 +743,7 @@
 <section id="portfolio" class="py-24 gradient-bg">
   <div class="container mx-auto px-6">
     
-    <!-- Case Study 1: E-commerce Mobile App -->
+    <!-- Case Study 1: QuickCart Mobile App -->
     <div class="case-study-card p-8 rounded-2xl mb-12 project-item" data-category="mobile" onclick="openModal('modal1')">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div class="order-2 md:order-1">
@@ -344,10 +751,9 @@
             <span class="px-3 py-1 bg-orange-500 text-white text-sm rounded-full mr-3">Mobile App</span>
             <span class="text-slate-400">2025</span>
           </div>
-          <h3 class="text-3xl font-bold text-white mb-4">ShopEase - E-commerce App</h3>
+          <h3 class="text-3xl font-bold text-white mb-4"> QuickCart: Grocery App</h3>
           <p class="text-slate-400 mb-6 leading-relaxed">
-            A comprehensive mobile shopping experience designed to increase user engagement and conversion rates. 
-            Features include intuitive navigation, personalized recommendations, and seamless checkout process.
+            Every Sunday, I'd spend 2 hours grocery shopping for what should be a 30-minute task. I'd forget items, wander aisles looking for products, and always overspend. I knew I wasn't alone in this struggle.
           </p>
           <div class="flex flex-wrap gap-2 mb-6">
             <span class="px-3 py-1 bg-slate-700 text-slate-300 text-sm rounded-full">User Research</span>
@@ -527,23 +933,456 @@
 <div id="modal1" class="modal">
   <div class="modal-content max-w-4xl">
     <button class="close-modal" onclick="closeModal('modal1')">&times;</button>
-    <div class="p-8">
-      <h2 class="text-4xl font-bold text-white mb-6">ShopEase - E-commerce Mobile App</h2>
-      
-      <div class="grid md:grid-cols-2 gap-8 mb-12">
-        <div>
-          <h3 class="text-2xl font-bold text-orange-500 mb-4">Project Overview</h3>
-          <p class="text-slate-300 mb-6">ShopEase is a comprehensive mobile shopping application designed to provide users with a seamless and enjoyable shopping experience. The app focuses on personalization, ease of use, and conversion optimization.</p>
-          
-          <h4 class="text-xl font-semibold text-white mb-3">Challenge</h4>
-          <p class="text-slate-400 mb-6">The existing mobile shopping experience had low engagement rates and high cart abandonment. Users found the interface cluttered and the checkout process too complicated.</p>
-          
-          <h4 class="text-xl font-semibold text-white mb-3">Solution</h4>
-          <p class="text-slate-400">Redesigned the entire user experience with focus on simplicity, personalization, and streamlined checkout process.</p>
+    <div class="container">
+            <div class="hero">
+                <h1>QuickCart</h1>
+                <p>A Personal UX Design Project</p>
+                <p><em>A 4-week solo design challenge to reimagine grocery shopping</em></p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <strong>Duration</strong>
+                        4 weeks
+                    </div>
+                    <div class="meta-item">
+                        <strong>Role</strong>
+                        Solo UX/UI Designer
+                    </div>
+                    <div class="meta-item">
+                        <strong>Tools</strong>
+                        Figma, Miro, Google Forms
+                    </div>
+                    <div class="meta-item">
+                        <strong>Type</strong>
+                        Personal Project
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=600&fit=crop&crop=center" alt="ShopEase App Screens" class="w-full rounded-lg">
+
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#testing">Testing</a></li>
+                <li><a href="#learnings">Learnings</a></li>
+                <li><a href="#impact">Impact</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="overview">
+                <h2>Project Overview</h2>
+                <p>As a design student, I wanted to tackle a real problem I face weekly—grocery shopping stress. This project became my opportunity to practice the full UX design process on a problem I genuinely cared about solving.</p>
+                
+                <div class="user-quote">
+                    "Every Sunday, I'd spend 2 hours grocery shopping for what should be a 30-minute task. I'd forget items, wander aisles looking for products, and always overspend. I knew I wasn't alone in this struggle."
+                </div>
+            </section>
+
+            <section id="problem" class="problem-section">
+                <div class="container">
+                    <h2>The Problem: My Grocery Shopping Reality</h2>
+                    
+                    <h3>Research Approach (Week 1)</h3>
+                    <p>Since this was a personal project, I had limited resources but used creative methods:</p>
+                    
+                    <div class="card-grid">
+                        <div class="card">
+                            <h4>📊 Survey</h4>
+                            <p>25 friends and family via Google Forms</p>
+                        </div>
+                        <div class="card">
+                            <h4>👀 Observation</h4>
+                            <p>Watched shoppers at local grocery store</p>
+                        </div>
+                        <div class="card">
+                            <h4>💬 Interviews</h4>
+                            <p>8 people over coffee/video calls</p>
+                        </div>
+                        <div class="card">
+                            <h4>🔍 Analysis</h4>
+                            <p>Reviewed 5 existing grocery apps</p>
+                        </div>
+                    </div>
+
+                    <h3>Key Insights</h3>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <span class="stat-number">80%</span>
+                            Use physical lists they often forget
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">45min</span>
+                            Longer than planned shopping trips
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Multiple</span>
+                            Stores but can't compare prices
+                        </div>
+                    </div>
+
+                    <h3>User Personas</h3>
+                    <div class="card-grid">
+                        <div class="card">
+                            <h4>👩‍🎓 "Busy Beth"</h4>
+                            <p><strong>Age:</strong> 28, Graduate student</p>
+                            <p><strong>Shops:</strong> Weekly for herself and roommate</p>
+                            <p><strong>Frustration:</strong> Forgetting items and overspending</p>
+                            <p><strong>Goal:</strong> Quick, efficient shopping within budget</p>
+                        </div>
+                        <div class="card">
+                            <h4>👨‍👩‍👧‍👦 "Family-Focused Frank"</h4>
+                            <p><strong>Age:</strong> 35, Works full-time with two kids</p>
+                            <p><strong>Shops:</strong> For family of four</p>
+                            <p><strong>Frustration:</strong> Kids distracting him, missing items</p>
+                            <p><strong>Goal:</strong> Complete family shopping without stress</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="process">
+                <h2>My Design Process</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h4>Week 1: Understanding the Problem</h4>
+                            <p><strong>Research Methods:</strong></p>
+                            <ul>
+                                <li>Created simple survey using Google Forms</li>
+                                <li>Conducted informal interviews with friends/family</li>
+                                <li>Spent 3 hours observing in grocery stores</li>
+                                <li>Sketched user journey maps</li>
+                            </ul>
+                            <p><strong>Biggest Learning:</strong> People don't need another complicated app—they need something that actually makes shopping faster and less stressful.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h4>Week 2: Ideation & Concepts</h4>
+                            <p><strong>Brainstorming Process:</strong></p>
+                            <ul>
+                                <li>Used sticky notes to generate 50+ ideas</li>
+                                <li>Grouped similar concepts</li>
+                                <li>Voted on top 3 concepts with friends</li>
+                                <li>Created simple user flows on paper</li>
+                            </ul>
+                            <p><strong>Selected Concept:</strong> A simple, smart shopping list app that organizes items by store layout, tracks spending in real-time, and works offline.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h4>Week 3: Wireframing & Design</h4>
+                            <p><strong>Lo-Fi Wireframes:</strong> Started with pen and paper sketches because it's faster for exploring ideas.</p>
+                            <p><strong>Design Decisions:</strong></p>
+                            <ul>
+                                <li>Large, thumb-friendly buttons (mobile-first)</li>
+                                <li>Minimal color palette (green = go, red = stop)</li>
+                                <li>Clear typography for easy scanning while shopping</li>
+                                <li>Simple navigation with bottom tabs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h4>Week 4: Prototyping & Testing</h4>
+                            <p><strong>Prototype Creation:</strong> Built interactive prototype in Figma focused on core user flow: Create list → Shop → Complete</p>
+                            <p><strong>Testing Process:</strong></p>
+                            <ul>
+                                <li>Asked 6 friends to test the prototype</li>
+                                <li>Observed them using it during actual shopping trips</li>
+                                <li>Collected feedback via informal interviews</li>
+                                <li>Iterated based on feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="solution">
+                <h2>The Solution: QuickCart</h2>
+                
+                <h3>Core Features</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h4>Smart List Organization</h4>
+                        <p>Items automatically sorted by store sections with voice input and smart suggestions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h4>Budget Tracking</h4>
+                        <p>Real-time spending counter with visual warnings and price estimates</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h4>Offline-First Design</h4>
+                        <p>All core features work without internet, essential for poor store connectivity</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h4>Simple & Fast</h4>
+                        <p>One-handed operation with large touch targets and minimal steps</p>
+                    </div>
+                </div>
+
+                <h3>Key Screens & User Flow</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>🏠 Home Screen</h4>
+                        <p><strong>Purpose:</strong> Quick access to current list and adding items</p>
+                        <p><strong>Features:</strong> Current list preview, quick add button, spending overview, recent items</p>
+                    </div>
+                    <div class="card">
+                        <h4>📋 List Creation</h4>
+                        <p><strong>Purpose:</strong> Build and organize shopping list</p>
+                        <p><strong>Features:</strong> Search and add items, voice input, automatic categorization, budget setting</p>
+                    </div>
+                    <div class="card">
+                        <h4>🛒 Shopping Mode</h4>
+                        <p><strong>Purpose:</strong> Guide user through store efficiently</p>
+                        <p><strong>Features:</strong> Items by store sections, large checkboxes, running total, store hints</p>
+                    </div>
+                    <div class="card">
+                        <h4>📊 Budget Overview</h4>
+                        <p><strong>Purpose:</strong> Track spending and avoid overspending</p>
+                        <p><strong>Features:</strong> Visual spending indicator, category breakdown, trip comparisons</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testing">
+                <h2>Testing & Iteration</h2>
+                
+                <h3>User Testing Results</h3>
+                <div class="user-quote">
+                    "Finally, a simple grocery app that doesn't try to do everything"
+                </div>
+                <div class="user-quote">
+                    "The store section organization saved me so much time"
+                </div>
+                <div class="user-quote">
+                    "Love how it works without internet—so many apps fail in stores"
+                </div>
+
+                <h3>Testing Method</h3>
+                <p>Moderated usability testing with 6 participants</p>
+                <p><strong>Task:</strong> Create a list, use it while shopping, track budget</p>
+
+                <h3>Iterations Made</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Round 1 Changes</h4>
+                        <ul>
+                            <li>Improved voice input with better error handling</li>
+                            <li>Added subtle budget warnings instead of pop-ups</li>
+                            <li>Simplified onboarding to 3 key screens</li>
+                            <li>Made text larger for better readability</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Round 2 Changes</h4>
+                        <ul>
+                            <li>Added quick tutorial animations</li>
+                            <li>Improved item suggestions algorithm</li>
+                            <li>Made checkout flow more prominent</li>
+                            <li>Added dark mode option</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="learnings">
+                <h2>What I Learned</h2>
+                
+                <div class="learning-grid">
+                    <div class="learning-column">
+                        <h4>Design Lessons</h4>
+                        <ul>
+                            <li>Start with the problem, not the solution</li>
+                            <li>Simple is harder than complex</li>
+                            <li>Test early and often</li>
+                            <li>Design for real contexts</li>
+                        </ul>
+                    </div>
+                    <div class="learning-column">
+                        <h4>Process Lessons</h4>
+                        <ul>
+                            <li>Constraints breed creativity</li>
+                            <li>User feedback is gold</li>
+                            <li>Iteration is essential</li>
+                            <li>Documentation helps thinking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Future Improvements</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Next Steps</h4>
+                        <ul>
+                            <li>Add barcode scanning</li>
+                            <li>Improve voice recognition</li>
+                            <li>Multiple store support</li>
+                            <li>Family sharing features</li>
+                            <li>Meal planning integration</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>What I'd Do Differently</h4>
+                        <ul>
+                            <li>Start with more user research</li>
+                            <li>Test in more stores</li>
+                            <li>Consider accessibility earlier</li>
+                            <li>Plan for scale</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="impact">
+                <h2>Project Impact</h2>
+                
+                <h3>Personal Growth</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h4>Skills Gained</h4>
+                        <ul>
+                            <li>Gained confidence in full UX process</li>
+                            <li>Learned Figma advanced prototyping</li>
+                            <li>Developed research skills with limited resources</li>
+                            <li>Improved presentation of design decisions</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Skills Demonstrated</h4>
+                        <ul>
+                            <li>User research and synthesis</li>
+                            <li>Problem definition and solution ideation</li>
+                            <li>Wireframing and prototyping</li>
+                            <li>User testing and iteration</li>
+                            <li>Visual design and systems thinking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Portfolio Value</h3>
+                <p>This project shows I can:</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Work Independently</h4>
+                        <p>Self-direct and manage complete projects</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h4>Solve Real Problems</h4>
+                        <p>Use design to address genuine user needs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h4>Iterate & Improve</h4>
+                        <p>Take feedback and improve solutions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h4>Document Process</h4>
+                        <p>Communicate design decisions clearly</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Conclusion</h2>
+                <p>QuickCart started as a personal frustration but became a comprehensive design learning experience. While it's not a real product, the problem-solving process was real, and the skills I developed are directly applicable to professional design work.</p>
+                
+                <p>The project taught me that good design isn't about having the biggest team or the most resources—it's about understanding problems deeply and creating solutions that genuinely help people.</p>
+                
+                <p>Most importantly, it showed me that I can take a problem from initial frustration to tested solution, which gives me confidence to tackle more complex challenges in my design career.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect</h3>
+                <p>This case study represents my first major UX project and demonstrates my ability to work through the complete design process independently.</p>
+                
+                <div class="footer-links">
+                    <a href="#" onclick="alert('Add your portfolio link here')">Portfolio</a>
+                    <a href="#" onclick="alert('Add your LinkedIn link here')">LinkedIn</a>
+                    <a href="#" onclick="alert('Add your email here')">Email</a>
+                    <a href="#" onclick="alert('Add your resume link here')">Resume</a>
+                </div>
+            </div>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
       </div>
       
       <div class="mb-12">
