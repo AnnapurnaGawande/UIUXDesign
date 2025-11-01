@@ -1,0 +1,13 @@
+{
+  "name": "html-to-video-converter",
+  "version": "1.0.0",
+  "description": "Convert HTML animations to video for WhatsApp sharing",
+  "main": "convert-to-video.js",
+  "scripts": {
+    "convert": "node convert-to-video.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0",
+    "puppeteer-screen-recorder": "^3.0.0"
+  }
+}
